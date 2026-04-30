@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="contact-section">
+
+    <h1 class="page-title">Let's Connect! 🥳</h1>
+
+    <div class="card contact-card">
+        <p class="contact-intro">
+            I am always open to discussing Health Technology projects,
+            innovative ideas, and new collaboration opportunities.
+        </p>
+        <div class="card">
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="flash {{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
+            <form method="POST" action="/submit-contact">
+
+                <input type="text" name="name" placeholder="Your Name" required>
+
+                <input type="email" name="email" placeholder="Your Email" required>
+
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="social-button">
+                    Send Message
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="social-links">
+            <a
+                href="https://www.linkedin.com/in/minh-nhat-hoang-69a83914a/"
+                target="_blank"
+                class="social-button linkedin"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/HoangThiMinhNhat?tab=repositories"
+                target="_blank"
+                class="social-button github"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="mailto:minhnhat.hoang@example.com"
+                id="sendBtn"
+                class="social-button email"
+            >
+                Email Me
+            </a>
+        </div>
+    </div>
+
+    <blockquote class="quote">
+        "Technology is best when it brings people together."
+    </blockquote>
+
+</section>
+{% endblock %}

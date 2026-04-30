@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="education-section">
+
+    <h1 class="page-title">Academic Journey</h1>
+
+    <div class="card education-card">
+        <img
+            src="{{ url_for('static', filename='assets/university-logo.png') }}"
+            alt="University Logo"
+            class="university-logo"
+        >
+
+        <div>
+            <h2>Turku University of Applied Sciences</h2>
+            <p><strong>Bachelor of Information and Communication Technology</strong></p>
+            <p>Specialization: Health Technology</p>
+            <p><em>2024 – Present</em></p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Skills & Expertise</h2>
+        <p>Filter by category:</p>
+
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="coding">Coding</button>
+            <button class="filter-btn" data-filter="health">Health Tech</button>
+        </div>
+
+        <div class="skills-list">
+            <span class="skill-tag skill-item" data-category="coding">Python</span>
+            <span class="skill-tag skill-item" data-category="coding">Java</span>
+            <span class="skill-tag skill-item" data-category="coding">SQL</span>
+            <span class="skill-tag skill-item" data-category="health">Medical Data Privacy</span>
+            <span class="skill-tag skill-item" data-category="health">Health Information Systems</span>
+            <span class="skill-tag skill-item" data-category="health">Usability Testing</span>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

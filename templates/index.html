@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="hero-section">
+    <div class="card profile-card">
+
+        <img
+            src="{{ url_for('static', filename='assets/avatar.jpg') }}"
+            alt="Minh Nhat Hoang"
+            class="avatar"
+        >
+
+        <h1>Minh Nhat Hoang</h1>
+
+        <p class="subtitle">
+            ICT Student | Health Technology Enthusiast
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="intro-text">
+            I am a second-year student at <strong>Turku University of Applied Sciences</strong>,
+            passionate about combining medical data with innovative
+            technology to improve patient care.
+        </p>
+
+        <div class="button-group">
+            <a href="{{ url_for('projects') }}" class="social-button">
+                Explore My Projects
+            </a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}

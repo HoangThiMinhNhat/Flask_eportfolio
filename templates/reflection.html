@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="reflection-section">
+
+    <h1 class="page-title">AI Reflection & Learning Journey</h1>
+
+    <div class="card reflection-card">
+        <h2>✨ The Vibe Coding Journey</h2>
+        <p class="reflection-date">
+            <em>Day 1 – Day 15: From Concept to Digital Solution</em>
+        </p>
+
+        <article class="reflection-content">
+            <i class="fas fa-check-circle success-icon"></i>
+            <h3>1. System Design, Modularity, and UI Architecture</h3>
+
+            <p>
+                In the initial stages, based on my preliminary descriptions, the AI generated designs that satisfied the basic functional requirements. However, these early outputs were fragmented and lacked systemic consistency across the application. Recognizing this limitation, I refined my prompts and directed the AI to restructure the project into a modular architecture consisting of separate HTML templates, a centralized CSS stylesheet, and a dedicated JavaScript file.
+            </p>
+
+            <p>
+                Rather than relying on isolated and disconnected web pages, I implemented a unified layout using a shared <code>base.html</code> template. This approach ensured consistency throughout the system while effectively applying the DRY (Don't Repeat Yourself) principle. As a result, development became more efficient, code duplication was significantly reduced, and future interface updates became much easier to manage.
+            </p>
+
+            <p>
+                Building each child page upon this shared foundation maintained both visual and structural consistency across the e-Portfolio. At the same time, individual sections—such as Education, Projects, and Contact—retained subtle stylistic distinctions that reflected their unique purposes, thereby improving usability, readability, and overall user experience.
+            </p>
+            <i class="fas fa-check-circle success-icon"></i>
+
+            <h3>2. Implementation, System Transition, and Critical Evaluation</h3>
+
+            <p>
+                After completing the frontend source code, the project progressed from interface design to functional implementation and testing. Although the AI initially suggested using Live Server in Visual Studio Code for rapid previewing, I deliberately chose to implement the application using Flask. This decision aligns more closely with my academic specialization in Health Technology and my professional interest in healthcare software and data-driven systems.
+            </p>
+
+            <p>
+                Integrating Flask enabled me to work within a dynamic web application environment and gain valuable practical experience with client–server architecture, routing, backend logic, and API development. This transition was a crucial milestone, transforming the e-Portfolio from a static website into an interactive and functional web application.
+            </p>
+
+            <p>
+                Following several rounds of debugging and refinement, I successfully developed a relatively complete system. Key features such as dark mode, a BMI calculator API, a contact form, and database integration significantly enhanced the application's functionality and professionalism.
+            </p>
+
+            <p>
+                Nevertheless, I recognize that the current implementation remains limited in scope. It does not yet include advanced backend capabilities such as robust authentication, comprehensive data analytics, role-based access control, or large-scale deployment considerations. To evolve this project into a fully scalable full-stack system, further development will be necessary.
+            </p>
+
+            <p>
+                Overall, this project has strengthened my technical skills in Flask, frontend development, database integration, and AI-assisted software engineering. More importantly, it has demonstrated the importance of critical evaluation, iterative refinement, and effective prompt engineering when collaborating with AI during the software development lifecycle.
+            </p>
+        </article>
+    </div>
+
+    <div class="card">
+        <h2>📺 AI & Technology Learning Resources</h2>
+        <p>Resources that continue to inspire my learning journey:</p>
+
+        <div class="resource-links">
+            <a href="https://www.youtube.com/@TwoMinutePapers" target="_blank" class="skill-tag">Two Minute Papers</a>
+            <a href="https://www.youtube.com/@AndrejKarpathy" target="_blank" class="skill-tag">Andrej Karpathy</a>
+            <a href="https://distill.pub/" target="_blank" class="skill-tag">Distill.pub</a>
+            <a href="https://www.thelancet.com/journals/landig/home" target="_blank" class="skill-tag">The Lancet Digital Health</a>
+            <a href="https://jamanetwork.com/journals/jama" target="_blank" class="skill-tag">JAMA</a>
+        </div>
+    </div>
+
+</section>
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="projects-section">
+
+    <h1 class="page-title">Technical Portfolio</h1>
+
+    <div class="card">
+        <h2>🚌 FOLI Pathfinding Visualizer</h2>
+        <p>
+            A Python-based application that visualizes bus routes in Turku
+            using advanced graph search algorithms such as Dijkstra's Algorithm
+            and A* Search.
+        </p>
+
+        <a href="https://github.com/HoangThiMinhNhat/FOLI_PATHFINDER-" target="_blank" class="project-link">
+            View on GitHub
+        </a>
+    </div>
+
+    <div class="card">
+        <h2>🧬 Interactive BMI Calculator</h2>
+        <p>
+            A health technology tool that calculates Body Mass Index (BMI)
+            and provides instant health classification.
+        </p>
+
+        <div class="bmi-inputs">
+            <input
+                type="number"
+                id="height"
+                placeholder="Height (cm)"
+                min="50"
+                max="250"
+            >
+
+            <input
+                type="number"
+                id="weight"
+                placeholder="Weight (kg)"
+                min="10"
+                max="300"
+            >
+
+            <button id="calculateBmiBtn" class="social-button">
+                Calculate BMI
+            </button>
+        </div>
+
+        <div id="bmi-result" class="bmi-result hidden">
+            <p>Your BMI: <span id="bmi-value"></span></p>
+            <p>Category: <span id="bmi-status"></span></p>
+        </div>
+    </div>
+
+</section>
+{% endblock %}
