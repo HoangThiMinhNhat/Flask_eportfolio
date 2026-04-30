@@ -19,7 +19,7 @@ A responsive personal portfolio web application built using Flask, HTML, CSS, Ja
 - CSS3
 - JavaScript
 - SQLite
-
+```
 flask-eportfolio/
 │
 ├── app.py
@@ -43,3 +43,4 @@ flask-eportfolio/
     ├── projects.html
     ├── reflection.html
     └── contact.html
+```
