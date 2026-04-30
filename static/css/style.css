@@ -1,0 +1,470 @@
+/* =========================================
+   GLOBAL VARIABLES
+   ========================================= */
+:root {
+    --primary: #1a2a3a;
+    --accent: #3498db;
+
+    --text-main: #2c3e50;
+    --text-light: #ffffff;
+
+    --bg-main: #f8fafc;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --bg-bmi-result: #f1f5f9;
+
+    --about-bg: linear-gradient(135deg, #e0f2fe, #f8fafc);
+    --edu-bg: linear-gradient(135deg, #fff7ed, #fffbeb);
+    --proj-bg: linear-gradient(135deg, #ecfdf5, #f0fdf4);
+    --refl-bg: linear-gradient(135deg, #faf5ff, #f5f3ff);
+    --contact-bg: linear-gradient(135deg, #fdf2f8, #fff1f2);
+
+    --primary-edu: #d97706;
+    --primary-proj: #16a34a;
+    --primary-refl: #9333ea;
+    --primary-contact: #db2777;
+
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --radius: 20px;
+}
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+body.dark-theme {
+    --primary: #0f172a;
+    --accent: #60a5fa;
+
+    --text-main: #f1f5f9;
+    --bg-main: #020617;
+    --bg-card: #1e293b;
+    --border-color: #334155;
+    --bg-bmi-result: #0f172a;
+
+    --about-bg: linear-gradient(135deg, #020617, #0f172a);
+    --edu-bg: linear-gradient(135deg, #1c1917, #292524);
+    --proj-bg: linear-gradient(135deg, #052e16, #14532d);
+    --refl-bg: linear-gradient(135deg, #2e1065, #581c87);
+    --contact-bg: linear-gradient(135deg, #500724, #881337);
+}
+
+/* =========================================
+   BASE STYLES
+   ========================================= */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--text-main);
+    background: var(--bg-main);
+    line-height: 1.7;
+    transition: all 0.3s ease;
+}
+
+/* =========================================
+   PAGE BACKGROUNDS
+   ========================================= */
+body {
+    background: var(--about-bg);
+}
+
+body.page-about {
+    background: var(--about-bg);
+}
+
+body.page-edu {
+    background: var(--edu-bg);
+}
+
+body.page-proj {
+    background: var(--proj-bg);
+}
+
+body.page-refl {
+    background: var(--refl-bg);
+}
+
+body.page-contact {
+    background: var(--contact-bg);
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(26, 42, 58, 0.95);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    min-height: 80vh;
+    padding: 3rem 0;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+/* =========================================
+   CARD
+   ========================================= */
+.card {
+    background: var(--bg-card);
+    border-radius: var(--radius);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+/* =========================================
+   HOME PAGE
+   ========================================= */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-card {
+    text-align: center;
+    max-width: 750px;
+}
+
+.avatar {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.subtitle {
+    color: var(--accent);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.divider {
+    width: 80px;
+    height: 4px;
+    background: var(--accent);
+    margin: 2rem auto;
+    border-radius: 999px;
+}
+
+.intro-text {
+    max-width: 650px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+.social-button,
+.project-link,
+.filter-btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    border: none;
+    border-radius: 999px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.social-button:hover,
+.project-link:hover,
+.filter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+}
+
+/* =========================================
+   SKILLS
+   ========================================= */
+.skills-list,
+.resource-links,
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.skill-tag {
+    background: var(--border-color);
+    color: var(--text-main);
+    padding: 0.7rem 1.2rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* =========================================
+   EDUCATION
+   ========================================= */
+.education-card {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.university-logo {
+    width: 90px;
+    height: auto;
+}
+
+/* =========================================
+   BMI CALCULATOR
+   ========================================= */
+.bmi-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 400px;
+    margin-top: 1.5rem;
+}
+
+.bmi-inputs input {
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-size: 1rem;
+}
+
+.bmi-result {
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    background: var(--bg-bmi-result);
+    border-left: 5px solid var(--primary-proj);
+    border-radius: 12px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* =========================================
+   CONTACT
+   ========================================= */
+.contact-section {
+    text-align: center;
+}
+
+.quote {
+    margin-top: 3rem;
+    font-size: 1.3rem;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+/* =========================================
+   DARK MODE TOGGLE
+   ========================================= */
+.theme-switch {
+    position: fixed;
+    top: 90px;
+    right: 25px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    z-index: 2000;
+    font-size: 1.4rem;
+}
+
+/* =========================================
+   BACK TO TOP
+   ========================================= */
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: var(--accent);
+    color: white;
+    cursor: pointer;
+    font-size: 1.2rem;
+    z-index: 2000;
+    box-shadow: var(--shadow);
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary);
+    color: white;
+    margin-top: 4rem;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .page-title {
+        font-size: 2.2rem;
+    }
+
+    .education-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+    }
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    font-weight: 600;
+    text-align: left;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-main);
+    font-family: inherit;
+}
+
+textarea {
+    resize: none;
+}
+
+.contact-card {
+    text-align: center;
+}
+.success-message {
+    background: #16a34a;
+    color: white;
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+.flash {
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.flash.success {
+    background: #16a34a;
+    color: white;
+}
+
+.flash.error {
+    background: #dc2626;
+    color: white;
+}
