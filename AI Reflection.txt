@@ -1,0 +1,15 @@
+AI Reflection: Technical Evolution & System Architecture 
+
+In the initial stages, based on my preliminary descriptions, the AI generated designs that met basic requirements but remained fragmented and lacked systemic consistency. Recognizing this issue, I took a proactive approach to redirect the process by instructing the AI to organize the source code into a modular structure with three primary modules: templates for HTML pages, CSS for style.css, and JS for script.js. 
+
+Regarding the HTML components, instead of relying on independent, disconnected web pages, I requested the development of a unified layout structure using a base.html file. This ensured design consistency and seamless connectivity across the site. Implementing the DRY (Don’t Repeat Yourself) principle through the base.html template not only saved significant development time but also minimized potential errors when updating the user interface across the entire system. 
+
+Redesigning the child pages upon this unified foundation helped maintain visual harmony while allowing for subtle, purposeful distinctions between sections, tailoring each to its specific function—such as Education or Projects. 
+
+Once the source code was finalized, the project transitioned from design to functional testing. Although the AI initially suggested using Live Server on VS Code for quick visualization, I proactively opted for a Flask API. This choice better aligns with my specialized focus on data analysis and the development of healthcare software systems. 
+
+Utilizing Flask allowed me to approach the model of a dynamic web application and familiarize myself with building and demonstrating a system based on client-server architecture. This was a crucial step in upgrading the e-Portfolio from a simple static website to a true web application. 
+
+Following the debugging process, I successfully achieved a relatively complete e-Portfolio web application. However, I recognize that further features must be integrated to evolve this into a comprehensive full-stack system. 
+
+ 
